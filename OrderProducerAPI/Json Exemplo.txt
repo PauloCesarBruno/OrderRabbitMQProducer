@@ -1,0 +1,9 @@
+﻿https://localhost:7125/api/Order // Rota pára o Postman
+
+{
+  "DataEntrada" : "2023-10-13",
+  "MarcaAparelho": "Samsung",
+  "ModeloAparelho": "Note 20-S",  
+  "Reparado": true,
+  "ValorConserto" : 163.55  
+}

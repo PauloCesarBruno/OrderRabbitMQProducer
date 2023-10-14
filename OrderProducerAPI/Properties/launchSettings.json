@@ -1,0 +1,31 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:59189",
+      "sslPort": 44369
+    }
+  },
+  "profiles": {
+    "OrderProducerAPI": {
+        "commandName": "Project",
+        "dotnetRunMessages": true,
+        "launchBrowser": false, // false´para não abrir no Browser
+        "launchUrl": "CellConcertOrder",
+        "applicationUrl": "https://localhost:7125;http://localhost:5051",
+        "environmentVariables": {
+            "ASPNETCORE_ENVIRONMENT": "Development"
+        }
+    },
+    "IIS Express": {
+        "commandName": "IISExpress",
+        "launchBrowser": true,
+        "launchUrl": "CellConcertOrder",
+        "environmentVariables": {
+            "ASPNETCORE_ENVIRONMENT": "Development"
+        }
+    }
+  }
+}
