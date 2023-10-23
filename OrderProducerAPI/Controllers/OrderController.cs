@@ -15,7 +15,7 @@ namespace OrderProducerAPI.Controllers
                 ?? throw new ArgumentNullException(nameof(rabbitMQMessageSender));
         }
         [HttpPost]
-        public async Task<ActionResult<CellConcertOrder>> PostProd(CellConcertOrder ord)
+        public async Task<ActionResult<Order>> PostProd(Order ord)
         {
             if (ord?.Id == null) return BadRequest();
 

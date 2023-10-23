@@ -44,7 +44,7 @@ namespace OrderProducerAPI
             {
                 WriteIndented = true, // Serializa as classes filhas
             };
-            var json = JsonSerializer.Serialize<CellConcertOrder>((CellConcertOrder)message, options);
+            var json = JsonSerializer.Serialize<Order>((Order)message, options);
             var body = Encoding.UTF8.GetBytes(json);
             return body;
         }

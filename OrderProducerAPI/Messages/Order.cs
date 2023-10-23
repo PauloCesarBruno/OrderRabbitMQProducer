@@ -4,7 +4,7 @@ using ValidacoesAPI.Validations;
 
 namespace OrderProducerAPI.Messages
 {
-    public class CellConcertOrder : BaseMessage
+    public class Order : BaseMessage
     {            
 
         [Required(ErrorMessage = "Campo Obrigatório !")]
@@ -16,8 +16,7 @@ namespace OrderProducerAPI.Messages
         [CustomValidationCPF(ErrorMessage = "CPF inválido")]
         public string CPF { get; set; }
 
-        [Required(ErrorMessage = "Campo Obrigatório !")]
-        //[EmailAddress(ErrorMessage = "Deve ser um e-mail válido !")]
+        [Required(ErrorMessage = "Campo Obrigatório !")]        
         [CustomValidationEmail(ErrorMessage = "O E-Mail está em um formato incorreto.")]
         public string Email { get; set; }
 
