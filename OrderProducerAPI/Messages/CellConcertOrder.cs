@@ -1,28 +1,43 @@
 ﻿using Mensagem.MessageBus;
 using System.ComponentModel.DataAnnotations;
+using ValidacoesAPI.Validations;
 
 namespace OrderProducerAPI.Messages
 {
     public class CellConcertOrder : BaseMessage
-    {
+    {            
 
         [Required(ErrorMessage = "Campo Obrigatório !")]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Minimo 03 caracteres !"), MaxLength(50, ErrorMessage = "Máximo 50 caracteres !")]
-        [Display(Name = "Nome do Aparelho Celullar")]
-        public string MarcaAparelho { get; set; }
+        [CustomValidationPrimeiraLetraMaiuscula]
+        [StringLength(50, ErrorMessage = "O Nome deve ter entre 05 e 50 caracteres !", MinimumLength = 5)]
+        public string Nome { get; set; }
 
         [Required(ErrorMessage = "Campo Obrigatório !")]
-        [StringLength(30, MinimumLength = 3, ErrorMessage = "Minimo 03 caracteres !"), MaxLength(30, ErrorMessage = "Máximo 30 caracteres !")]
-        [Display(Name = "Modelo do Aparelho Celullar")]
-        public string ModeloAparelho { get; set; }
+        [CustomValidationCPF(ErrorMessage = "CPF inválido")]
+        public string CPF { get; set; }
 
         [Required(ErrorMessage = "Campo Obrigatório !")]
-        [Display(Name = "Concertado")]
-        public bool Reparado { get; set; }         
+        //[EmailAddress(ErrorMessage = "Deve ser um e-mail válido !")]
+        [CustomValidationEmail(ErrorMessage = "O E-Mail está em um formato incorreto.")]
+        public string Email { get; set; }
 
         [Required(ErrorMessage = "Campo Obrigatório !")]
-        [Display(Name = "Valor do Concerto")]
-        [DataType(DataType.Currency)]
-        public decimal ValorConserto { get; set; }
+        public string Telefone { get; set; }
+
+        [Required(ErrorMessage = "Campo Obrigatório !")]
+        [StringLength(30, ErrorMessage = "O Nome deve ter entre 05 e 30 caracteres.", MinimumLength = 5)]
+        public string Cartao { get; set; }
+
+        [Required(ErrorMessage = "Campo Obrigatório !")]
+        [CustomValidationNumeroCartao]
+        public string NumeroCartao { get; set; }
+
+        [Required(ErrorMessage = "Campo Obrigatório !")]
+        [MesAno(ErrorMessage = "Data de vencimento não é válida, preencha conf. EX - > (01/30)")]
+        public string DataVencimento { get; set; }
+
+        [Required(ErrorMessage = "Campo Obrigatório !")]
+        [CustomValidationCVVCartao]
+        public string CVV { get; set; }
     }
 }

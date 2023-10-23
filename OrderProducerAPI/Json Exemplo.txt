@@ -1,9 +1,48 @@
 ﻿https://localhost:7125/api/Order // Rota pára o Postman
 
-{
-  "DataEntrada" : "2023-10-13",
-  "MarcaAparelho": "Samsung",
-  "ModeloAparelho": "Note 20-S",  
-  "Reparado": true,
-  "ValorConserto" : 163.55  
-}
+[
+  {
+    "id": 1,
+    "nome": "Paulo Cesar Cordovil Bruno VISA",
+    "cpf": "01802883770",
+    "email": "p_bruno001@hotmail.com",
+    "telefone": "(21) 99437-7955",
+    "cartao": "Bradesco VISA",
+    "numeroCartao": "4103924900580480",
+    "dataVencimento": "12/30",
+    "cvv": "285"
+  },
+  {
+    "id": 2,
+    "nome": "Adão Vasconcelo dos Santos",
+    "cpf": "01045567736",
+    "email": "AdaoVascSantos@Yahoo.com.br",
+    "telefone": "(21) 95325-8520",
+    "cartao": "CEF Master Card",
+    "numeroCartao": "5448280000000007",
+    "dataVencimento": "02/33",
+    "cvv": "094"
+  },
+  {
+    "id": 3,
+    "nome": "Adolfo Proprietário de onde resido",
+    "cpf": "29740657753",
+    "email": "Adolfododo@gmail.com",
+    "telefone": "(21) 95320-0254",
+    "cartao": "Itaú Master Card",
+    "numeroCartao": "5502090872194041",
+    "dataVencimento": "10/30",
+    "cvv": "888"
+  },
+  {
+    "id": 4,
+    "nome": "Claudia Santos do Nascimento",
+    "cpf": "07192389358",
+    "email": "Kaka_0kal@hotmail.com",
+    "telefone": "(21) 97277-6614",
+    "cartao": "Cartão ELO",
+    "numeroCartao": "4389351648020055",
+    "dataVencimento": "02/29",
+    "cvv": "223"
+  }
+]
