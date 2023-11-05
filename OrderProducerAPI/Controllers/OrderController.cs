@@ -19,7 +19,7 @@ namespace OrderProducerAPI.Controllers
         {
             if (ord?.Id == null) return BadRequest();
 
-            //  Integração com RabbitMQ.
+            // Integração com RabbitMQ.
             _rabbitMQMessageSender.SendMessage(ord, "Orderqueue");
 
             return Ok(ord);
